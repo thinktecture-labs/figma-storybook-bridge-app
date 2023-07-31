@@ -1,0 +1,23 @@
+mat-toolbar{
+  min-height: 4rem;
+}
+.right{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.content {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+:host {
+  display: flex;
+  flex-direction: column;
+  background: #333;
+  color: white;
+  height: 100vh;
+  overflow: hidden;
+}

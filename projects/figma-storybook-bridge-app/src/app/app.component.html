@@ -1,0 +1,18 @@
+<mat-toolbar>
+  <div class="content">
+    <div class="title">
+      Storybook Bridge
+    </div>
+    <div class="right">
+    <a [href]="source" target="_blank" *ngIf="storeService.source$ | async as source">
+      <button mat-icon-button>
+        <mat-icon fontIcon="visibility"></mat-icon>
+      </button>
+    </a>
+    <button mat-icon-button routerLink="/setup">
+      <mat-icon fontIcon="settings"></mat-icon>
+    </button>
+    </div>
+  </div>
+</mat-toolbar>
+<router-outlet></router-outlet>

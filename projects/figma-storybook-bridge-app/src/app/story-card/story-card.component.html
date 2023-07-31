@@ -1,0 +1,25 @@
+<mat-card>
+  <mat-card-header>
+    <div class="row" *ngIf="entry">
+      <div class="left">
+        <button mat-icon-button *ngIf="showBack" routerLink="/list">
+          <mat-icon fontIcon="chevron_left"></mat-icon>
+        </button>
+        {{entry?.title}} {{entry?.name}}
+        <a [href]="entry?.urlWithToolbar" target="_blank" *ngIf="showBack">
+          <button mat-icon-button>
+            <mat-icon fontIcon="visibility"></mat-icon>
+          </button>
+        </a>
+      </div>
+      <div class="right">
+        <button mat-icon-button *ngIf="showCancel" (click)="disableSync.emit()">
+          <mat-icon fontIcon="sync_disabled"></mat-icon>
+        </button>
+      </div>
+    </div>
+  </mat-card-header>
+  <mat-card-content>
+    <iframe [src]="showToolbar ? entry?.urlWithToolbar :entry?.url" loading="lazy"></iframe>
+  </mat-card-content>
+</mat-card>

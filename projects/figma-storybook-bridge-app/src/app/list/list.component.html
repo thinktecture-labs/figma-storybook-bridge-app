@@ -1,0 +1,3 @@
+<div class="cards">
+  <labs-story-card matRipple *ngFor="let entry of entries$ | async" [entry]="entry" [routerLink]="['/', 'detail',entry.id]" (click)="assign(entry.id)"></labs-story-card>
+</div>

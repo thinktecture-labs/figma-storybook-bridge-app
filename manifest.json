@@ -1,0 +1,20 @@
+{
+  "name": "Storybook Bridge",
+  "id": "1264484896373130812",
+  "api": "1.0.0",
+  "main": "code.js",
+  "capabilities": [
+    "inspect"
+  ],
+  "enableProposedApi": false,
+  "editorType": [
+    "dev"
+  ],
+  "ui": "dist/figma-storybook-bridge-app/index.html",
+  "networkAccess": {
+    "allowedDomains": [
+      "*"
+    ],
+    "reasoning": "MyPlugin queries httpbin.org/get for example responses."
+  }
+}

@@ -1,0 +1,21 @@
+.cards {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  overflow: auto;
+  height: 100%;
+  padding: 0 1rem;
+}
+
+labs-story-card {
+  cursor: pointer;
+  width: 100%;
+  min-height: 26rem;
+}
+
+:host {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  overflow: hidden;
+}

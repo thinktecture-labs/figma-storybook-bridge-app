@@ -1,0 +1,15 @@
+.header {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+
+  button {
+    translate: 0 -.755rem;
+  }
+}
+
+:host {
+  display: grid;
+  place-items: center;
+  padding: 1rem;
+}
