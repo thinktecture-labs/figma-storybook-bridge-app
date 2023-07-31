@@ -15,6 +15,6 @@
     "allowedDomains": [
       "*"
     ],
-    "reasoning": "MyPlugin queries httpbin.org/get for example responses."
+    "reasoning": "The plugin queries the remote app, Storybook instance and google fonts."
   }
 }
