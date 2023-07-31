@@ -8,6 +8,7 @@ export interface Entry {
   tags: string[];
   url: SafeResourceUrl;
   urlWithToolbar: SafeResourceUrl;
+  urlExternal: SafeResourceUrl;
 }
 
 export interface Entries {

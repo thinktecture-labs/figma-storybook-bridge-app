@@ -5,8 +5,8 @@
         <button mat-icon-button *ngIf="showBack" routerLink="/list">
           <mat-icon fontIcon="chevron_left"></mat-icon>
         </button>
-        {{entry?.title}} {{entry?.name}}
-        <a [href]="entry?.urlWithToolbar" target="_blank" *ngIf="showBack">
+        <span class="path">{{entry?.title}}</span> {{entry?.name}}
+        <a [href]="entry?.urlExternal" target="_blank" *ngIf="showBack">
           <button mat-icon-button>
             <mat-icon fontIcon="visibility"></mat-icon>
           </button>

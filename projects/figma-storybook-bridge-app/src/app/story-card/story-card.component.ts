@@ -1,5 +1,5 @@
 import {CommonModule} from '@angular/common';
-import {Component, EventEmitter, Input, Output} from '@angular/core';
+import {Component, EventEmitter, HostBinding, Input, Output} from '@angular/core';
 import {MatButtonModule} from '@angular/material/button';
 import {MatCardModule} from '@angular/material/card';
 import {MatIconModule} from '@angular/material/icon';
@@ -16,6 +16,7 @@ import {Entry} from '../data';
 export class StoryCardComponent {
   @Input({required: true}) entry?: Entry;
   @Input() showToolbar = false;
+  @HostBinding('class.enable-interaction')
   @Input() showBack = false;
   @Input() showCancel = false;
   @Output() disableSync = new EventEmitter();

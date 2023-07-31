@@ -1,6 +1,10 @@
+.source-field {
+  flex: 1;
+}
 .header {
   display: flex;
   align-items: center;
+  width: 100%;
   gap: 1.5rem;
 
   button {

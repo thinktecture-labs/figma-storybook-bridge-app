@@ -6,6 +6,7 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatIconModule} from '@angular/material/icon';
 import {MatInputModule} from '@angular/material/input';
 import {Router} from '@angular/router';
+import {tap} from 'rxjs';
 import {DataService} from '../store/data.service';
 import {StoreService} from '../store/store.service';
 
@@ -20,7 +21,7 @@ export class SetupComponent {
   private readonly router = inject(Router);
   private readonly dataService = inject(DataService);
   private readonly storeService = inject(StoreService);
-  source$ = this.storeService.source$; // https://konstantin-denerz.com/design-system-impl-material
+  source$ = this.storeService.source$.pipe(tap(source => this.source = source)); // https://thinktecture-labs.github.io/angular-material3-design-system-demo
   source = '';
 
 

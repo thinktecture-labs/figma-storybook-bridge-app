@@ -7,6 +7,7 @@ import {Index} from '../data';
 import {StoreService} from './store.service';
 
 export const INDEX_ROUTE = 'index.json';
+export const VERSION= 'v0.0.1';
 
 @Injectable({providedIn: 'root'})
 export class DataService {
@@ -27,8 +28,9 @@ export class DataService {
       return;
     }
     Object.entries(index.entries).forEach(([id, entry]) => {
-      entry.url = this.domSanitizer.bypassSecurityTrustResourceUrl(`${source}/iframe.html?id=${id}&viewMode=story&shortcuts=false&singleStory=true`);
-      entry.urlWithToolbar = this.domSanitizer.bypassSecurityTrustResourceUrl(`${source}/?path=/story/${id}&full=1&shortcuts=false&singleStory=true`);
+      entry.url = this.domSanitizer.bypassSecurityTrustResourceUrl(`${source}/iframe.html?id=${id}&viewMode=story&shortcuts=false&singleStory=true&${VERSION}`);
+      entry.urlWithToolbar = this.domSanitizer.bypassSecurityTrustResourceUrl(`${source}/?path=/story/${id}&full=1&shortcuts=false&singleStory=true&${VERSION}`);
+      entry.urlExternal = this.domSanitizer.bypassSecurityTrustResourceUrl(`${source}/?path=/story/${id}&${VERSION}`);
     })
     this.storeService.updateIndex(index);
   }

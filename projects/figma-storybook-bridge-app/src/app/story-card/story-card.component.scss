@@ -1,5 +1,5 @@
 mat-card-header {
-  padding: .5rem;
+  padding: .5rem 1rem;
   display: flex;
   align-items: center;
 
@@ -11,21 +11,28 @@ mat-card-header {
   gap: 1rem;
   justify-content: space-between;
 }
+
+.path {
+  opacity: .7;
+}
 .left {
   display: flex;
   align-items: center;
+  gap: .5rem;
 }
 
 .right {
   display: flex;
   align-items: center;
   justify-content: flex-end;
+  gap: .5rem;
 }
 iframe {
   border: none;
   border-radius: .25rem;
   width: 100%;
   height: 100%;
+  pointer-events: none;
 }
 mat-card {
   height: 100%;
@@ -33,4 +40,12 @@ mat-card {
 
 mat-card-content {
   height: 100%;
+}
+
+:host {
+  &.enable-interaction {
+    iframe {
+      pointer-events: all;
+    }
+  }
 }
