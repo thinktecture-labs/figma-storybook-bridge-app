@@ -8,7 +8,7 @@ figma.skipInvisibleInstanceChildren = true
 // You can access browser APIs in the <script> tag inside "ui.html" which has a
 // full browser environment (See https://www.figma.com/plugin-docs/how-plugins-run).
 // This shows the HTML page in "ui.html".
-figma.showUI(`<script>window.location.href = "http://localhost:4200"</script>`, {width: 600, height: 600});
+figma.showUI(`<script>window.location.href = "http://localhost:4200"</script>`, {width: 800, height: 640});
 // This monitors the selection changes and posts the selection to the UI
 figma.on('selectionchange', () => {
   if (figma.currentPage.selection.length === 0) {

@@ -19,3 +19,7 @@ export interface Index {
   v: number;
   entries: Entries;
 }
+
+export interface Project {
+  generatedAt: number;
+}
